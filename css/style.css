@@ -144,3 +144,38 @@ img {
         column-gap: 4rem;
     }
 }
+
+/* index */
+.horizontal-split {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .left-half {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    
+  }
+  
+  .right-half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  
+  .titulo {
+    font-style: arial;
+    font-size: 35px; 
+    color: #53402b; 
+    margin-bottom: 10px;
+  }
+
+  .main-content {
+    margin: 30px; /* Alinea el contenido principal a la derecha de la barra lateral */
+    padding: 20px;
+}
