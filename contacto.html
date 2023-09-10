@@ -17,12 +17,12 @@
 
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
 
     <header class="header">
-
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="index.html">
@@ -41,11 +41,66 @@
             <h2 class="no-margin">Cafetería y Respostería</h2>
             <p class="no-margin">Bienvenido al paraíso del café y los postres.</p>
         </div>
-
     </header>
 
+    <section class="plan">
+        <div class="centrar-texto">
+            <h4 class="tilin">Horario de ateción al Publico</h4>
+            <p><strong>Lun - Vier:</strong> 7:00am-9:00pm</p>
+            <p><strong>Sábado:</S></strong>8:00am-6:00pm</p>
+        </div>
+            <hr>
+        <div class="centrar-texto">
+            <h4 class="tilin">Números de télefonos</h4>
+            <p><strong>Télefono:</strong>+503 2268-9473</p>
+            <p><strong>Télefono:</strong>+503 2387-9401</p>
+        </div>
+            <hr>
+        <div class="centrar-texto">
+            <h4 class="tilin">Dirección de Correo Electronico</h5>
+            <p><strong>E-mail: </strong>lacafeta@correos.sv</p>
+        </div>        
+    </section>
 
+    <main class="contenedor">
+        <h3 class="centrar-texto">Contacto Privado</h3>
+        <div class="contacto-bg">
+            <form class="formulario">
+                <div class="campo">
+                    <label class="campo__label" for="nombre">Nombre</label>
+                    <input class="campo__field" type="text" placeholder="Tu nombre completo" id="nombre">
+                </div>
+                <div class="campo">
+                    <label class="campo__label" for="email">E-Mail</label>
+                    <input class="campo__field" type="email" placeholder="Tu e-mail" id="email">
+                </div>
+                <div class="campo">
+                    <label class="campo__label" for="mensaje">Mensaje</label>
+                    <textarea class="campo__field campo__field--textarea" type="text" placeholder="Mensaje" id="mensaje"></textarea>
+                </div>
+                <div class="campo">
+                    <a href="#" class="boton boton--primario">Enviar</a>
+                </div>
+            </form>
+        </div>     
+    </main>
+
+    
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">La<span class="logo__bold">Cafeta</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="menu.html" class="navegacion__enlace">Menú</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
 
 </body>
-
 </html>
