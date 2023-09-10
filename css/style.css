@@ -365,3 +365,9 @@ ul{
     list-style-type: disc;
     margin-left: 20px;
 }
+
+.footer{
+    background-color: var(--negro);
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
