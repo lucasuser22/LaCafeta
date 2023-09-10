@@ -1,4 +1,4 @@
-:root{
+:root {
     --fuenteHeadding: 'PT Sans', sans-serif;
     --fuenteParrafos: 'Open Sans', sans-serif;
 
@@ -8,13 +8,17 @@
     --negro: #000000;
 }
 
-html{
+html {
     box-sizing: border-box;
-    font-size: 62.5%; /* 1 rem = 10px */
+    font-size: 62.5%;
+    /* 1 rem = 10px */
 }
-*, *::before, *:after {
+
+*,
+*::before,
+*:after {
     box-sizing: inherit;
-} 
+}
 
 body {
     font-family: var(--fuenteParrafos);
@@ -23,7 +27,7 @@ body {
 }
 
 
-/* GLOBALES */  
+/* GLOBALES */
 .contenedor {
     max-width: 120rem;
     width: 95%;
@@ -31,7 +35,7 @@ body {
     margin: 0 auto;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     .contenedor {
         width: 70%;
     }
@@ -42,20 +46,27 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--fuenteHeadding);
     line-height: 1.2;
 }
+
 h1 {
     font-size: 4.8rem;
 }
-h2{
+
+h2 {
     font-size: 4rem;
 }
-h3{
+
+h3 {
     font-size: 3.2rem;
 }
-h4{
+
+h4 {
     font-size: 2.8rem;
 }
 
@@ -73,6 +84,7 @@ img {
 .no-padding {
     padding: 0;
 }
+
 .centrar-texto {
     text-align: center;
 }
@@ -81,13 +93,16 @@ img {
 .webp .header {
     background-image: url(..img/img/banner.webp);
 }
+
 .no-webp .header {
     background-image: url(..img/banner.jpg);
 }
+
 .header {
     background-image: url(../img/banner.jpg);
     height: 40rem;
-    background-size: cover; /* para que tome todo el espacio disponible */
+    background-size: cover;
+    /* para que tome todo el espacio disponible */
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -97,14 +112,17 @@ img {
     color: var(--blanco);
     margin-top: 5rem;
 }
+
 @media (min-width: 768px) {
     .header__texto {
         margin-top: 15rem;
     }
 }
+
 .barra {
     padding: 4rem;
 }
+
 @media (min-width: 768px) {
     .barra {
         display: flex;
@@ -113,12 +131,14 @@ img {
     }
 }
 
-.logo{
+.logo {
     color: var(--blanco);
 }
+
 .logo__nombre {
     font-weight: 400;
 }
+
 .logo__bold {
     font-weight: 700;
 }
@@ -127,7 +147,7 @@ img {
     .navegacion {
         display: flex;
         gap: 2rem;
-    }   
+    }
 }
 
 .navegacion__enlace {
@@ -143,4 +163,109 @@ img {
         grid-template-columns: 2fr 1fr;
         column-gap: 4rem;
     }
+}
+
+@media (min-width: 480px) { 
+    .box {
+        -webkit-box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.54);
+        -moz-box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.54);
+        box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.54);
+        background-color: var(--blanco);
+        padding: 0.5rem;
+        border-radius: 1rem;
+        margin: 0 auto 10rem auto;
+    }
+}
+
+
+.boton {
+    background-color: var(--gris);
+    /* color del boton */
+    color: var(--negro);
+    /* color de las letras */
+    padding: 1rem 3rem;
+    /*tamaño del boton */
+    font-size: 2rem;
+    text-decoration: none;
+    /* quitar la linea de abajo del link */
+    font-weight: bold;
+    /* bold = 700 osea negrita */
+    border-radius: .5rem;
+    /*redondear la esquinas del boton */
+    width: 90%;
+    text-align: center;
+    border: none;
+    margin-top: 5rem;
+    margin-right: -2rem;
+}
+
+.boton-activo,
+.boton:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+.menu {
+    margin-top: 5rem;
+}
+
+
+
+
+@media (min-width: 480px) {
+
+    /* servicios */
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.3rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* productos */
+    .productos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+.producto h4, .producto p, .producto img {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2rem;  
+    color: var(--negro);  
+}
+
+
+.productos .producto{
+    width: 95%;
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.54);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.54);
+    box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.54);
+    background-color: var(--blanco);
+    padding: 0;
+    border-radius: 1rem;
+    margin: 3rem 0 3rem 0;
+}
+
+@media (min-width: 769px) { 
+    .contenedor-box{
+        max-width: 80%;
+    }
+    .productos .producto:hover {
+        width: 100%;
+    }
+}
+
+
+.menu-bg {
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
