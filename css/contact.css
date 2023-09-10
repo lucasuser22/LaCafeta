@@ -1,93 +1,122 @@
-.plan {
-    width: 26.7%;
-    padding: 0%;
-    margin: 30px 1.5%;
-    background-color: rgb(162, 135, 135);
-    border: solid 1px black;
-    border-radius: 1px;
-    float: left;
-    text-align: justify;
-    color: white;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(204, 173, 173);
+body {
+    background: #ADA996;
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: black;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
 }
 
-/*CONTACTO*/
-.contacto-bg {
-    background-image: url(../img/contacto.jpg);
-    height: 40rem;
-    background-size: cover;
-    background-repeat: no-repeat;
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
 }
 
-/*CONTACTO*/
-.formulario {
-    background-color: var(--rosa);
-    border: 1px solid var(--negro);
-    width: min(60rem, 100%);
-    /* utilizar el valor mas pequeño  */
-    margin: 0 auto;
-    /* centramos el formulario, esto se ocupa cuando el padre no es un display flex y 
-    cuando es un elemento como en este caso un formulario */
-    padding: 2rem;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-.campo {
-    margin-bottom: 1rem;
+.logo2 {
+    text-align: center;
+    font-size: 3em;
 }
 
-.campo__label {
-    margin-bottom: .5rem;
+.logo2 .tilin{
+    color: black;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.contact-form {
+    background: #ffffff;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
     display: block;
-    font-weight: bold;
 }
 
-.campo__field--textarea {
-    height: 20rem;
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
 }
 
-.campo__field {
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
     width: 100%;
+    padding: .7em;
     border: none;
-    padding: 1rem;
-    border-radius: .5rem;
-    border: 1px solid var(--negro);
+    background: none;
+    outline: 0;
+    color: black;
+    border-bottom: 1px solid #d63031;
 }
 
-@media (min-width: 768px) {
-    .formulario {
-        border: none;
-        margin: -5rem auto 0 auto;
-        width: 95%;
-        padding: 5rem;
-    }
-
-    .campo {
-        display: flex;
-        margin-bottom: 2rem;
-        gap: 2rem;
-    }
-
-    .campo__label {
-        flex: 0 0 9rem;
-        /* esto dejara fijo el tamaño del label en 9 rem */
-        text-align: right;
-        padding-right: 2rem;
-    }
-
-    .campo__field {
-        flex: 1;
-    }
-
-    .campo__field--textarea {
-        height: 20rem;
-    }
+.contact-form form button {
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
 }
 
-section {
-    margin: 0 auto;
-    width: 100%;
-    outline: 1px solid white;
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/* CONTACT INFO */
+.contact-info {
+    background: rgb(169, 150, 150);
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+    body {
+        padding: 0 4em;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
 }
