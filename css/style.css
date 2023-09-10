@@ -361,3 +361,80 @@ ul{
     list-style-type: disc;
     margin-left: 20px;
 }
+/* CONTACTO */
+.contact {
+    background: #ADA996;
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.formulario {
+    border: 1px solid var(--negro);
+    width: min( 60rem, 100%); /* utilizar el valor mas pequeño  */
+    margin: 0 auto; /* centramos el formulario, esto se ocupa cuando el padre no es un display flex y 
+    cuando es un elemento como en este caso un formulario */
+    padding: 2rem;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo__label {
+    margin-bottom: .5rem;
+    display: block;
+    font-weight: bold;      
+}
+
+.campo__field--textarea {
+    height: 20rem;
+}
+
+.campo__field {
+     width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--negro);
+}
+
+@media (min-width: 768px) { 
+    .formulario {
+        border: none;
+        margin: -5rem auto 0 auto;
+        width: 95%;
+        padding: 5rem;
+    }
+    
+    .campo {
+        display: flex;
+        margin-bottom: 2rem;
+        gap: 2rem;
+    }
+    
+    
+    .campo__label {
+        flex: 0 0 9rem; /* esto dejara fijo el tamaño del label en 9 rem */
+        text-align: right;
+        padding-right: 2rem;
+    }
+    
+    .campo__field {
+        flex: 1;
+    }
+    
+    .campo__field--textarea {
+        height: 20rem;
+    }
+}

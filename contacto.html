@@ -7,20 +7,18 @@
     <title>Contactanos</title>
     <meta name="description" content="Página web La Cafeta">
 
-
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap"
-        crossorigin="crossorigin" as="font">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
 </head>
 
-<body>
+<body class="contact">
 
     <header class="header">
         <div class="contenedor">
@@ -43,49 +41,56 @@
         </div>
     </header>
 
-    <section class="plan">
-        <div class="centrar-texto">
-            <h4 class="tilin">Horario de ateción al Publico</h4>
-            <p><strong>Lun - Vier:</strong> 7:00am-9:00pm</p>
-            <p><strong>Sábado:</S></strong>8:00am-6:00pm</p>
-        </div>
-            <hr>
-        <div class="centrar-texto">
-            <h4 class="tilin">Números de télefonos</h4>
-            <p><strong>Télefono:</strong>+503 2268-9473</p>
-            <p><strong>Télefono:</strong>+503 2387-9401</p>
-        </div>
-            <hr>
-        <div class="centrar-texto">
-            <h4 class="tilin">Dirección de Correo Electronico</h5>
-            <p><strong>E-mail: </strong>lacafeta@correos.sv</p>
-        </div>        
-    </section>
 
-    <main class="contenedor">
-        <h3 class="centrar-texto">Contacto Privado</h3>
-        <div class="contacto-bg">
-            <form class="formulario">
-                <div class="campo">
-                    <label class="campo__label" for="nombre">Nombre</label>
-                    <input class="campo__field" type="text" placeholder="Tu nombre completo" id="nombre">
-                </div>
-                <div class="campo">
-                    <label class="campo__label" for="email">E-Mail</label>
-                    <input class="campo__field" type="email" placeholder="Tu e-mail" id="email">
-                </div>
-                <div class="campo">
-                    <label class="campo__label" for="mensaje">Mensaje</label>
-                    <textarea class="campo__field campo__field--textarea" type="text" placeholder="Mensaje" id="mensaje"></textarea>
-                </div>
-                <div class="campo">
-                    <a href="#" class="boton boton--primario">Enviar</a>
-                </div>
-            </form>
-        </div>     
-    </main>
+    <div class="content">
 
-    
+        <h1 class="logo2" class="tilin">Contacto</h1>
+
+        <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-form">
+                <h3>Contacto</h3>
+                <form action="">
+                    <p>
+                        <label>Name</label>
+                        <input type="text" name="name">
+                    </p>
+                    <p>
+                        <label>Email</label>
+                        <input type="email" name="email">
+                    </p>
+                    <p>
+                        <label>Telefono</label>
+                        <input type="tel" name="tel">
+                    </p>
+                    <p class="block">
+                        <label>Mesaje</label>
+                        <textarea name="message" rows="10"></textarea>
+                    </p>
+                    <p class="block">
+                        <button>
+                            Enviar
+                        </button>
+                    </p>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h4>Información</h4>
+                <ul>
+                    <p>
+                        <li><i class="fas fa-map-marker-alt">El Salvador, Cuidad Delgado</i></li>
+                    </p>
+                    <p>
+                        <li><i class="fas fa-phone"></i> (+503) 2345-5587</li>
+                    </p>
+                    <p>
+                        <li><i class="fas fa-envelope-open-text"></i> lacafeta@website.sv</li>
+                    </p>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
 
     <footer class="footer">
         <div class="contenedor">
@@ -103,4 +108,5 @@
     </footer>
 
 </body>
+
 </html>
