@@ -332,6 +332,9 @@ img {
     margin-top: 4rem;
 }
 /* NOSOTROS*/
+
+@media(min-width:768px) {
+
 .sobre-nosotros_imagen{
     padding-top: 6%;
     max-width: 100%;
@@ -340,6 +343,7 @@ img {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     column-gap: 3rem;
+}
 }
 
 h2{
