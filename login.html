@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/loguear.js"></script>
+
+</head>
+
+<body>
+
+
+
+
+    <main>
+        <div class="container">
+            <div class="row my-5">
+                <div class="col"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3"></div>
+
+                <div class="col-sm-12 col-md-8 col-lg-6 col-xl-6 py-4  bg-white ">
+                    <form class="container sombra container-form login-bg">
+                        <div class="mb-3">
+                            <label for="usuario" class="form-label pt-3">Usuario</label>
+                            <input type="text" class="form-control" id="usuario"
+                                placeholder="Digite su usuario">
+                        </div>
+                        <div class="my-4">
+                            <label for="clave" class="form-label pt-3">Contraseña</label>
+                            <input type="password" class="form-control" id="clave"
+                                placeholder="Digite su clave">
+                        </div>
+                        <button type="button" value="entrar" class="btn btn-primary my-4" id="boton-login"
+                            onclick="loguear()">Acceder</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row my-4"></div>
+
+    </main>
+
+
+
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

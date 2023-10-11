@@ -1,0 +1,17 @@
+.logo {
+    color: var(--blanco);
+}
+
+.logo__nombre {
+    font-weight: 400;
+}
+
+.logo__bold {
+    font-weight: 700;
+}
+
+
+a {
+    text-decoration: none;
+}
+
