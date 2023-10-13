@@ -3,7 +3,7 @@ function loguear() {
     let password = document.getElementById("clave");
 
     if (user.value == "administrador" && password.value == "admini") {
-        window.location = "http://127.0.0.1:5501/gestion.html";
+        window.location = "index/gestion.html";
         user.value = "";
         password.value = "";
         
