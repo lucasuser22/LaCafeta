@@ -1,4 +1,5 @@
 function loguear() {
+
     let user = document.getElementById("usuario");
     let password = document.getElementById("clave");
 
@@ -7,15 +8,15 @@ function loguear() {
         user.value = "";
         password.value == "";
     }
-    else if (user.value == "cocinero" && password.value == "coock") {
-        window.location = "../gestion.html";
+    else if (user.value == "mesero" && password.value == "ordenes") {
+        window.location = "mesero.html" || "../LaCafeta/mesero.html";
         user.value = "";
         password.value == "";
     }
-    else if (user.value == "mesero" && password.value == "pedido") {
-        window.location = "../gestion.html";
+    else if (user.value == "cocinero" && password.value == "coock") {
+        window.location = "cocinero.html" || "../cocinero/mesero.html";
         user.value = "";
-        password == "";
+        password.value == "";
     }
     else if (user.value == "" || password.value == "") {
         alert("Campos vacíos");
@@ -27,7 +28,10 @@ function loguear() {
 
 }
 
+/*
 function ocultarBoton() {
-    var boton = document.getElementById("#");
+    var boton = document.getElementById("gestion-menu");
     boton.style.display = "none";
 }
+
+*/
