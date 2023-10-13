@@ -6,11 +6,16 @@ function loguear() {
         window.location = "LaCafeta/gestion.html";
         user.value = "";
         password.value = "";
-        
     }
-    else if(user.value == "cocinero" && password.value == "coock") {
-        window.location = "../cocinero.html";
+    else if (user.value == "cocinero" && password.value == "coock") {
+        window.location = "../gestion.html";
         user.value = "";
+        password.value == "";
+    }
+    else if (user.value == "mesero" && password.value == "pedido") {
+        window.location = "../gestion.html";
+        user.value = "";
+        password == "";
     }
     else if (user.value == "" || password.value == "") {
         alert("Campos vacíos");
@@ -19,10 +24,10 @@ function loguear() {
         alert("Datos incorrectos");
     }
 
-    
+
 }
 
 function ocultarBoton() {
-    var boton = document.getElementById("boton-login");
+    var boton = document.getElementById("#");
     boton.style.display = "none";
-  }
+}
