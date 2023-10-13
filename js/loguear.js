@@ -3,8 +3,7 @@ function loguear() {
     let password = document.getElementById("clave");
 
     if (user.value == "administrador" && password.value == "admini") {
-        window.location = "../LaCafeta/gestion.html" || "gestion.html"
-        //window.location = 
+        window.location = "gestion.html" || "../LaCafeta/gestion.html";
         user.value = "";
         password.value == "";
     }
