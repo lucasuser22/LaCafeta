@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel=" stylesheet" href="css/gestion.css">
     <link rel="stylesheet" href="css/mesero.css">
-    
+
     <title>Ordenes</title>
 </head>
+
 <body>
-    
+
 
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
@@ -44,59 +46,63 @@
     </nav>
     <!-- Fin de la barra -->
     <!-- Contenido del sitio web-->
-    <h1>mesero</h1>
-    <p>Tomar orden para el cliente:</p>
-     <form id="orderForm">
-        <label for="product">Producto:</label>
-        
-        <select id="product">
-            <!--
+    <div class="container-fluid col-sm-12 col-md-8 col-lg-6 col-xl-6 py-4 px-4">
+        <h1>mesero</h1>
+        <p>Tomar orden para el cliente:</p>
+        <form id="orderForm">
+            <label for="product">Producto:</label>
+
+            <select id="product">
+                <!--
             <option value="tartaleta de fresa" data-price="2.00">Tartaleta de fresa $2.00</option>
             <option value="Brownie de chocolate" data-price="2.00">Brownie de chocolate $2.50</option>
             <option value="Trta de cereza" data-price="2.00">tarta de cereza $3.00</option>
             -->
-        </select>
+            </select>
 
-        <label for="quantity">Cantidad:</label>
-        <input type="number" id="quantity" value="1" min="1">
-        <button type="button" class="boton-mesero" onclick="agregarProducto()">Agregar Producto</button>
-        <button type="button"  class="boton-mesero" onclick="generarTicket()">Generar Ticket</button>
-        <button type="button" class="boton-mesero" onclick="enviarOrdenAlCocinero()">Enviar Orden Al Cocinero</button>
-    </form>
+            <label for="quantity">Cantidad:</label>
+            <input type="number" id="quantity" value="1" min="1">
+            <button type="button" class="boton-mesero" onclick="agregarProducto()">Agregar Producto</button>
+            <button type="button" class="boton-mesero" onclick="generarTicket()">Generar Ticket</button>
+            <button type="button" class="boton-mesero" onclick="enviarOrdenAlCocinero()">Enviar Orden Al
+                Cocinero</button>
+        </form>
 
-    <h2>Orden Actual</h2>
-    <ul id="currentOrder">
-        <!-- aqui se mostraran los productos seleccionados -->
-    </ul>
-    <h2>Total de la Orden</h2>
-    <p id="total">$0.00</p>
+        <h2 class="py-5">Orden Actual</h2>
+        <ul id="currentOrder">
+            <!-- aqui se mostraran los productos seleccionados -->
+        </ul>
+        <h2>Total de la Orden</h2>
+        <p id="total">$0.00</p>
 
-    <!-- se agregara un div para general el ticket -->
-    <div id="ticketContainer">
-        <h2>Ticket de Compra</h2>
-        <table id="ticketTable">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio Unitario</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tbody id="ticketBody">
-                <!-- aqui se mostraran los productos seleccionados -->
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3" class="ticket-total-label">Total</td>
-                    <td id="ticketTotal" class="ticket-total-amount">$0.00</td>
-                </tr>
-            </tfoot>
-        </table>
+        <!-- se agregara un div para general el ticket -->
+        <div id="ticketContainer">
+            <h2>Ticket de Compra</h2>
+            <table id="ticketTable">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="ticketBody">
+                    <!-- aqui se mostraran los productos seleccionados -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="ticket-total-label">Total</td>
+                        <td id="ticketTotal" class="ticket-total-amount">$0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </div>
 
     <script src="js/mesero.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/loguear.js" prefer></script>
 </body>
+
 </html>

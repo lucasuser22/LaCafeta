@@ -1,3 +1,4 @@
+
 function loguear() {
 
     let user = document.getElementById("usuario");
@@ -28,6 +29,7 @@ function loguear() {
 
 }
 
+
 /*
 function ocultarBoton() {
     var boton = document.getElementById("gestion-menu");
@@ -35,3 +37,4 @@ function ocultarBoton() {
 }
 
 */
+
