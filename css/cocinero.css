@@ -1,0 +1,48 @@
+/* Estilo para la página del cocinero */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-collapse: collapse;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilo para las filas pares de la tabla */
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para las filas impares de la tabla */
+table tr:nth-child(odd) {
+    background-color: #e0e0e0;
+}
