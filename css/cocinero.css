@@ -46,3 +46,8 @@ table tr:nth-child(even) {
 table tr:nth-child(odd) {
     background-color: #e0e0e0;
 }
+
+
+.navbar {
+    position: relative; /* Asegura que la posición sea relativa para los elementos hijos */
+}
