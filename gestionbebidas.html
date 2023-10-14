@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gestionmenu.css">
+    <title>gestionMenu</title>
+</head>
+
+<body class="menu-bg">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel p-0">
+                <div class="offcanvas-header">
+                    <a class="logo" href="index.html">
+                        <h1 class="logo__nombre no-margin centrar-texto">La<span class="logo__bold">Cafeta</span></h1>
+                    </a>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="gestion.html" id="gestion-Usuarios">Gestion de usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mesero.html">Ordenes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cocinero.html">Cocina</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="box contenedor-box menu">
+            <a class="boton" href="gestionMenu.html">Postres</a>
+            <a class="boton boton-activo" href="gestionbebidas.html">Bebidas</a>
+
+
+            <div>
+                <button id="agregarProducto" class="boton1">Agregar Producto</button>
+                <h3>Para modificar los productos ya existentes solo da click sobre ellos</h3>
+                <div class="productos">
+
+                    <section class="producto">
+                        <div class="iconos"> 
+                            <input type="file" id="inputImagen1" accept="image/*" style="display: none;">
+                            <img id="imagenMostrada1" src="img/chocolatada-bebida.jpg">
+                            <h4 id="nombreProducto1">Chocolatada</h4>
+                            <p id="precioProducto1">$2.00</p>
+                            <button class="eliminarProducto">Eliminar</button>
+                        </div>
+                    </section>
+                    
+                    <section class="producto">
+                        <div class="iconos">
+                            <input type="file" id="inputImagen2" accept="image/*" style="display: none;">
+                            <img id="imagenMostrada2" src="img/frozen-cafe.jpg">
+                            <h4 id="nombreProducto2">frozen-cafe</h4>
+                            <p id="precioProducto2">$3.00</p>
+                            <button class="eliminarProducto">Eliminar</button>
+                        </div>
+                    </section>
+
+                    <section class="producto">
+                        <div class="iconos">
+                            <input type="file" id="inputImagen3" accept="image/*" style="display: none;">
+                            <img id="imagenMostrada3" src="img/cafe-helado.jpg">
+                            <h4 id="nombreProducto3">cafe-helado</h4>
+                            <p id="precioProducto3">$2.50</p>
+                            <button class="eliminarProducto">Eliminar</button>
+                        </div>
+                    </section>
+
+                    <section class="producto">
+                        <div class="iconos">
+                            <input type="file" id="inputImagen4" accept="image/*" style="display: none;">
+                            <img id="imagenMostrada4" src="img/pumpkin-chocolate.jpg">
+                            <h4 id="nombreProducto4">pumpkin-chocolate</h4>
+                            <p id="precioProducto4">$3.00</p>
+                            <button class="eliminarProducto">Eliminar</button>
+                        </div>
+                    </section>
+
+                    <section class="producto">
+                        <div class="iconos">
+                            <input type="file" id="inputImagen5" accept="image/*" style="display: none;">
+                            <img id="imagenMostrada5" src="img/enselada-frutas.jpg">
+                            <h4 id="nombreProducto5">enselada-frutas</h4>
+                            <p id="precioProducto5">$2.50</p>
+                            <button class="eliminarProducto">Eliminar</button>
+                        </div>
+                    </section>
+
+                    <section class="producto">
+                        <div class="iconos">
+                            <input type="file" id="inputImagen6" accept="image/*" style="display: none;">
+                            <img id="imagenMostrada6" src="img/frozen-caramelo.jpg">
+                            <h4 id="nombreProducto6">frozen-caramelo</h4>
+                            <p id="precioProducto6">$2,50</p>
+                            <button class="eliminarProducto">Eliminar</button>
+                        </div>
+                    </section>
+
+                    <section class="producto">
+                        <div class="iconos">
+                            <input type="file" id="inputImagen7" accept="image/*" style="display: none;">
+                            <img id="imagenMostrada7" src="img/batido-oreo.jpg">
+                            <h4 id="nombreProducto7">batido-oreo</h4>
+                            <p id="precioProducto7">$2,00</p>
+                            <button class="eliminarProducto">Eliminar</button>
+                        </div>
+                    </section>
+
+                    <section class="producto">
+                        <div class="iconos">
+                            <input type="file" id="inputImagen8" accept="image/*" style="display: none;">
+                            <img id="imagenMostrada8" src="img/fresa-crema-batida.jpg">
+                            <h4 id="nombreProducto8">fresa-crema-batida</h4>
+                            <p id="precioProducto8">$2,00</p>
+                            <button class="eliminarProducto">Eliminar</button>
+                        </div>
+                    </section>
+
+                    <section class="producto">
+                        <div class="iconos">
+                            <input type="file" id="inputImagen9" accept="image/*" style="display: none;">
+                            <img id="imagenMostrada9" src="img/cafe-malvavisco.jpg">
+                            <h4 id="nombreProducto9">cafe-malvavisco</h4>
+                            <p id="precioProducto9">$3,00</p>
+                            <button class="eliminarProducto">Eliminar</button>
+                        </div>
+                    </section>
+
+                   
+                        
+                    
+                    <script>
+                        function setupSection(sectionId) {
+                            const inputImagen = document.getElementById(`inputImagen${sectionId}`);
+                            const imagenMostrada = document.getElementById(`imagenMostrada${sectionId}`);
+                            const nombreProducto = document.getElementById(`nombreProducto${sectionId}`);
+                            const precioProducto = document.getElementById(`precioProducto${sectionId}`);
+                            const eliminarBoton = document.querySelector(".eliminarProducto");
+        
+
+                        
+
+                            imagenMostrada.addEventListener("click", function () {
+                                
+                                inputImagen.click();
+                            });
+                    
+                            
+                            inputImagen.addEventListener("change", function () {
+                                const file = inputImagen.files[0]; // Obtener archivo seleccionado
+                    
+                                if (file) {
+                                    const imageUrl = URL.createObjectURL(file);
+                    
+                                    const img = new Image();
+                                    img.src = imageUrl;
+                    
+                                    img.onload = function() {
+                                        
+                                        const canvas = document.createElement("canvas");
+                                        const ctx = canvas.getContext("2d");
+                    
+                                        // Redimensionar la imagen a 730x1100
+                                        canvas.width = 730;
+                                        canvas.height = 1100;
+                                        ctx.drawImage(img, 0, 0, 730, 1100);
+                    
+                                        imagenMostrada.src = canvas.toDataURL("image/jpeg");
+                    
+                                        URL.revokeObjectURL(imageUrl);
+                                    };
+                                } else {
+                                    // mostrar imagen de defectpo si no se selecciona un archivo
+                                    imagenMostrada.src = "img/default.jpeg"; 
+                                }
+                            });
+                    
+                         
+                            imagenMostrada.addEventListener("click", function () {
+                                const nuevoNombre = prompt("Ingrese el nuevo nombre del producto:");
+                                if (nuevoNombre !== null) {
+                                    nombreProducto.textContent = nuevoNombre;
+                                }
+                    
+                                const nuevoPrecio = prompt("Ingrese el nuevo precio del producto:");
+                                if (nuevoPrecio !== null) {
+                                    precioProducto.textContent = "$" + nuevoPrecio;
+                                }
+                            });
+                        }
+                    
+                        document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("eliminarProducto")) {
+            const seccion = event.target.closest(".producto");
+            if (seccion) {
+                seccion.remove();
+            }
+        }
+    });
+  
+    document.getElementById("agregarProducto").addEventListener("click", function () {
+    // Crear una nueva sección
+    const productos = document.querySelector(".productos");
+    const nuevaSeccion = document.createElement("section");
+    nuevaSeccion.className = "producto";
+    const nuevoId = productos.children.length + 1;
+
+    nuevaSeccion.innerHTML = `
+        <div class="iconos">
+            <input type="file" id="inputImagen${nuevoId}" accept="image/*" style="display: none;">
+            <img id="imagenMostrada${nuevoId}" src="img/default.jpeg">
+            <h4 id="nombreProducto${nuevoId}">Nuevo Producto</h4>
+            <p id="precioProducto${nuevoId}">$0.00</p>
+            <button class="eliminarProducto">Eliminar</button>
+        </div>
+    `;
+
+    // Agregar la nueva sección al principio de la lista
+    if (productos.children.length > 0) {
+        productos.insertBefore(nuevaSeccion, productos.children[0]);
+    } else {
+        productos.appendChild(nuevaSeccion);
+    }
+
+    // Configurar la nueva sección
+    setupSection(nuevoId);
+});
+
+
+                        setupSection(1);
+                      
+                        setupSection(2);
+
+                        setupSection(3);
+
+                        setupSection(4);
+                        
+                        setupSection(5);
+
+                        setupSection(6);
+
+                        setupSection(7);
+
+                        setupSection(8);
+
+                        setupSection(9);
+
+                    </script>
+                    
+
+                </div> 
+            </div>
+        </div>
+
+        
+
+    </main>
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo_nombre no-margin centrar-texto">La<span class="logo__bold">Cafeta</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="menu.html" class="navegacion__enlace">Menu</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
