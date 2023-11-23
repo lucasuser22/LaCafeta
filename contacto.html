@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactanos</title>
     <meta name="description" content="Página web La Cafeta">
-
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -16,6 +15,13 @@
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
+
+    <!--Firebase-->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="./js/firebaseContacto.js"></script>
 </head>
 
 <body>
@@ -41,6 +47,14 @@
         </div>
     </header>
 
+    <div id="alert" role="alert" class="hidden relative px-4 py-3 text-red-700 bg-red-100">
+        <strong>Error!</strong>
+        <span>Por favor llena tus datos correctamente</span>
+      </div>
+    
+      <div id="success" role="alert" class="hidden flex items-center px-4 py-3 text-sm font-bold text-white bg-blue-500">
+        <p>Los datos de tu formulario han sido enviados exitosamente.</p>
+      </div>
 
     <div class="content">
 
@@ -51,23 +65,23 @@
                 <h3>Reserva para eventos</h3>
                 <form action="">
                     <p>
-                        <label>Nombre</label>
-                        <input type="text" name="name">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
                     </p>
                     <p>
-                        <label>Telefono</label>
-                        <input type="tel" name="tel">
+                        <label for="tel">Telefono</label>
+                        <input type="tel" id="tel" name="tel" required>
                     </p>
                     <p>
-                        <label>Email</label>
-                        <input type="email" name="email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </p>
                     <p class="block">
-                        <label>Mesaje</label>
-                        <textarea name="message" rows="5"></textarea>
+                        <label for="message">Mesaje</label>
+                        <textarea id="message" name="message" rows="3" required></textarea>
                     </p>
                     <p class="block">
-                        <button>
+                        <button onclick="send()">
                             Enviar
                         </button>
                     </p>
@@ -106,7 +120,7 @@
             </div>
         </div>
     </footer>
-
+<script src="./js/contacto.js"></script>
 </body>
 
 </html>
