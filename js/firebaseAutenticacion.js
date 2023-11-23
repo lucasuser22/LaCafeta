@@ -13,7 +13,7 @@ firebase.initializeApp(firebaseConfig);
 // Obtener referencia al servicio de Firestore
 var db = firebase.firestore();
 
-//LOGUEO
+// ...
 
 // Código de inicio de sesión
 document.getElementById('btnLogin').addEventListener('click', function() {
@@ -36,7 +36,8 @@ document.getElementById('btnLogin').addEventListener('click', function() {
         .then(function(doc) {
           if (doc.exists) {
             var tipoUsuario = doc.data().tipoUsuario;
-
+  // Almacenar el tipo de usuario en sessionStorage
+  sessionStorage.setItem('tipoUsuario', tipoUsuario);
             // Redirige a la página según el tipo de usuario
             switch (tipoUsuario) {
               case 'administrador':
@@ -67,7 +68,7 @@ document.getElementById('btnLogin').addEventListener('click', function() {
       var errorCode = error.code;
       var errorMessage = error.message;
       console.error('Error durante el inicio de sesión:', errorCode, errorMessage);
-      alert('Credenciales incorrectas: ');
+      alert('Credenciales incorrectas: ' + errorMessage);
     });
 
   document.getElementById('email').value = '';

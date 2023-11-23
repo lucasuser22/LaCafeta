@@ -1,3 +1,14 @@
+// Después de iniciar sesión
+var tipoUsuario = sessionStorage.getItem('tipoUsuario');
+console.log(tipoUsuario);
+if (tipoUsuario == 'cocinero') {
+  // Redirigir a una página de acceso denegado o realizar otras acciones
+  window.location.href = 'cocinero.html';
+}
+else if(tipoUsuario == 'mesero') {
+  window.location.href = 'mesero.html';
+}
+
 // Initial config
 // This is not "real security", API Keys are
 // able to authenticate users, anything else :D
@@ -173,11 +184,5 @@ const firebaseConfig = {
         console.error('Error al eliminar usuario de Firestore:', error);
       });
   }
-  
-  
-  
-  
-  
-  
   
   
