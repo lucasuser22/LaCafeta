@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"">
     <link rel=" stylesheet" href="css/gestion.css">
     <title>Gestion</title>
-    <script src="js/loguear.js"></script>
 </head>
 
 <body>
@@ -76,8 +75,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="usuario" class="form-label">Usuario</label>
-                    <input type="text" class="form-control" id="usuario" placeholder="Usuario para loguearse">
+                    <label for="email" class="form-label">email</label>
+                    <input type="email" class="form-control" id="usuario" placeholder="Usuario para loguearse">
                 </div>
 
                 <div class="mb-3">
@@ -85,28 +84,8 @@
                     <input type="text" class="form-control" id="clave" placeholder="clave del usuario">
                 </div>
 
-                <div class="row">
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="edad" class="form-label">Edad</label>
-                            <input type="number" class="form-control" id="edad" min="18">
-                        </div>
-                    </div>
-
-                    <div class="mb-4 col">
-                        <label for="sexo" class="form-label">Sexo:</label>
-                        <select class="form-select" id="sexo">
-                            <option value="masculino">Masculino</option>
-                            <option value="femenino">Femenino</option>
-                        </select>
-                    </div>
-
-                </div>
-
-
-
                 <div class="mb-5 col">
-                    <select class="form-select" id="carrera">
+                    <select class="form-select" id="usuarioTipo">
                         <option value="#" disabled selected>Seleccione el tipo de usuario</option>
                         <option value="administrador">Administrador</option>
                         <option value="mesero">Mesero</option>
@@ -117,8 +96,8 @@
 
 
                 <div class="d-grid gap-3">
-                    <button class="btn btn-success py-3">Guardar</button>
-                    <button class="btn btn-secondary py-2">Limpiar</button>
+                    <button type="button" value="signUp" class="btn btn-primary my-4 py-3"
+                        id="btnSignUp">Guardar</button>
                 </div>
             </form>
 
@@ -127,8 +106,42 @@
     </div>
 
 
+
+       <!-- TABLA -->
+       <div class="row">
+        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3"></div>
+        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-6 py-4 px-4 bg-white rounded">
+            <h2 class="mb-3 text-center">Registro de empleados</h2>
+            <form class="py-3">
+                <!-- ... Tus campos de registro ... -->
+            </form>
+            <h2 class="mb-3 text-center">Lista de Usuarios</h2>
+            <!-- Tabla para mostrar usuarios -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Correo Electrónico</th>
+                        <th scope="col">Tipo de Usuario</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUsuarios"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script type="module" src="js/gestion.js" defer></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 
 
 </body>

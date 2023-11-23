@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Login</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/gestion.css">
-    <script src="js/loguear.js"></script>
-
 </head>
 
 <body>
@@ -23,38 +22,53 @@
 
     <div class="row">
 
+      
+
         <div class="col-sm-2 col-md-2 col-lg-4 col-xl-4"></div>
 
-        <div class="col-sm-8 col-md-8 col-lg-4 col-xl-4 py-4 px-4 bg-white rounded">
+        <div id="loginFormUI" class="col-sm-8 col-md-8 col-lg-4 col-xl-4 py-4 px-4 bg-white rounded">
             <h2 class="mb-3 text-center">La cafeta</h2>
-            <form class="py-3">
-
+          
+            <form class="loginForm py-3" name="loginForm">
 
                 <div class="mb-3">
-                    <label for="usuario" class="form-label pt-3">Usuario</label>
-                    <input type="text" class="form-control" id="usuario" placeholder="Digite su usuario">
+                    <label for="email" class="form-label pt-3">Usuario</label>
+                    <input 
+                    id="email"
+                    type="email" 
+                    name="email" 
+                    class="form-control input" 
+                    placeholder="Digite su usuario">
                 </div>
                 <div class="my-4">
-                    <label for="clave" class="form-label pt-3">Contraseña</label>
-                    <input type="password" class="form-control" id="clave" placeholder="Digite su clave">
+                    <label for="password" class="form-label pt-3">Contraseña</label>
+                    <input 
+                    type="password" 
+                    name="password" 
+                    class="form-control input" 
+                    id="clave" 
+                    placeholder="Digite su clave">
                 </div>
-                <button type="button" value="entrar" class="btn btn-primary my-4" id="boton-login"
-                    onclick="loguear()">Acceder</button>
-
+                <button type="button" value="isLogin" class="btn btn-primary my-4" id="btnLogin">Acceder</button>
+            
             </form>
+            
 
         </div>
 
-        
+     
 
     </div>
 
 
 
 
-
-
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="module" src="js/firebaseAutenticacion.js" defer></script>
 </body>
+
+
 
 </html>
