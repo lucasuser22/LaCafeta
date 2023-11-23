@@ -6,17 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú</title>
     <meta name="description" content="Página web La Cafeta">
-
-
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap"
-        crossorigin="crossorigin" as="font">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap"
-        rel="stylesheet">
-
-    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gestionmenu.css">
+    <title>gestionMenu</title>
+
 </head>
 
 <body class="menu-bg">
@@ -37,11 +31,6 @@
             </div>
         </div>
 
-        <div class="header__texto">
-            <h2 class="no-margin">Cafetería y Respostería</h2>
-            <p class="no-margin">Bienvenido al paraíso del café y los postres.</p>
-        </div>
-
     </header>
 
     <main>
@@ -51,84 +40,17 @@
             <div>
 
                 <h3>Deleitate con nuestros riquisimos postres</h3>
-                <div class="productos">
+                
 
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/tartaleta-fresa.jpg" alt="postre">
-                            <h4>Tartaleta de fresa</h4>
-                            <p>$2.00</p>
+                    <div class="container card-body-all">
+                        <div class="card-container d-flex flex-wrap" id="crud-table">
                         </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/brownie-chocolate.jpg" alt="postre">
-                            <h4>Brownie de chocolate</h4>
-                            <p>$2.50</p>
+                    </div>              
+                                <button type="submit" class="btn submitButton w-100" id="submitdata"></button>
+                            </div>
                         </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/tarta-cereza.jpg" alt="postre">
-                            <h4>Tarta de cereza</h4>
-                            <p>$3.00</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/cheescake-3sabores.jpg" alt="postre">
-                            <h4>Cheescake 3 sabores</h4>
-                            <p>$3.00</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/cheescake-mora.jpg" alt="postre">
-                            <h4>Cheescake mora</h4>
-                            <p>$3.50</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/Oreo-Cupcakes.jpg" alt="postre">
-                            <h4>Cupcakes de oreo</h4>
-                            <p>$2.50</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/tartaleta-frutas.jpg" alt="postre">
-                            <h4>Tartaleta de frutas</h4>
-                            <p>$3.00</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/mini-pastel .jpg" alt="postre">
-                            <h4>Mini pastel de fresa con kiwi</h4>
-                            <p>$4.00</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/pastel-chocolate.jpg" alt="postre">
-                            <h4>Pastel de chocolate</h4>
-                            <p>$4.00</p>
-                        </div>
-                    </section>
-
-
-                </div> <!--productos -->
-            </div>
-        </div>
+                    </div>
+                  </div>
 
     </main>
     <footer class="footer">
@@ -146,8 +68,8 @@
         </div>
     </footer>
 
-    
-
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="module" src="js/scriptmenucliente.js" defer></script>
 
 
 </body>

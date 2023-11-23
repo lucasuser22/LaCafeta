@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gestionmenu.css">
     <title>gestionMenu</title>
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
 </head>
 
 <body class="menu-bg">
@@ -53,106 +60,83 @@
             <a class="boton boton-activo" href="gestionMenu.html">Postres</a>
             <a class="boton" href="gestionbebidas.html">Bebidas</a>
 
-
-            <div>
-                <button id="agregarProducto" class="boton1">Agregar Producto</button>
-                <h3>Para modificar los productos ya existentes solo da click sobre ellos</h3>
-                <div class="productos">
-
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <input type="file" id="inputImagen1" accept="image/*" style="display: none;">
-                            <img id="imagenMostrada1" src="img/tartaleta-fresa.jpg">
-                            <h4 id="nombreProducto1">Tartaleta de fresa</h4>
-                            <p id="precioProducto1">$2.00</p>
-                            <button class="eliminarProducto">Eliminar</button>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <input type="file" id="inputImagen2" accept="image/*" style="display: none;">
-                            <img id="imagenMostrada2" src="img/pastel-chocolate.jpg">
-                            <h4 id="nombreProducto2">Pastel de chocolate</h4>
-                            <p id="precioProducto2">$3.00</p>
-                            <button class="eliminarProducto">Eliminar</button>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <input type="file" id="inputImagen3" accept="image/*" style="display: none;">
-                            <img id="imagenMostrada3" src="img/tarta-cereza.jpg">
-                            <h4 id="nombreProducto3">tarta-cereza</h4>
-                            <p id="precioProducto3">$3.00</p>
-                            <button class="eliminarProducto">Eliminar</button>
-                        </div>
-                    </section>
-                    <section class="producto">
-                        <div class="iconos">
-                            <input type="file" id="inputImagen4" accept="image/*" style="display: none;">
-                            <img id="imagenMostrada4" src="img/brownie-chocolate.jpg">
-                            <h4 id="nombreProducto4">brownie-chocolate</h4>
-                            <p id="precioProducto4">$3.00</p>
-                            <button class="eliminarProducto">Eliminar</button>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <input type="file" id="inputImagen5" accept="image/*" style="display: none;">
-                            <img id="imagenMostrada5" src="img/cheescake-3sabores.jpg">
-                            <h4 id="nombreProducto5">cheescake-3sabores</h4>
-                            <p id="precioProducto5">$3.00</p>
-                            <button class="eliminarProducto">Eliminar</button>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <input type="file" id="inputImagen6" accept="image/*" style="display: none;">
-                            <img id="imagenMostrada6" src="img/cheescake-mora.jpg">
-                            <h4 id="nombreProducto6">cheescake-Mora</h4>
-                            <p id="precioProducto6">$3,50</p>
-                            <button class="eliminarProducto">Eliminar</button>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <input type="file" id="inputImagen7" accept="image/*" style="display: none;">
-                            <img id="imagenMostrada7" src="img/Oreo-Cupcakes.jpg">
-                            <h4 id="nombreProducto7">Oreo-Cupcakes</h4>
-                            <p id="precioProducto7">$2.00</p>
-                            <button class="eliminarProducto">Eliminar</button>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <input type="file" id="inputImagen8" accept="image/*" style="display: none;">
-                            <img id="imagenMostrada8" src="img/tartaleta-frutas.jpg">
-                            <h4 id="nombreProducto8">tartaleta-frutas</h4>
-                            <p id="precioProducto8">$3.00</p>
-                            <button class="eliminarProducto">Eliminar</button>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <input type="file" id="inputImagen9" accept="image/*" style="display: none;">
-                            <img id="imagenMostrada9" src="img/mini-pastel .jpg">
-                            <h4 id="nombreProducto9">mini-pastel</h4>
-                            <p id="precioProducto9">$4.00</p>
-                            <button class="eliminarProducto">Eliminar</button>
-                        </div>
-                    </section>
-
+            <nav class="navbar nav-bar sticky-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-flex justify-content-between">
+                      <button type="button" class="btn btn-primary btn-add" data-bs-toggle="modal" data-bs-target="#addDataModal">Add Product</button>
+                    </a>
                 </div>
-            </div>
+            </nav>
+          <div class="container card-body-all">
+              <div class="card-container d-flex flex-wrap" id="crud-table">
+              </div>
+          </div>
+        <!-- navbar end -->
+        
+        <!-- Add Module Start -->
+        <div class="modal fade" id="addDataModal" tabindex="-1" aria-labelledby="addDataModal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content" id="form">
+                  <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="addDataModal">Add Product</h1>
+                      <button type="button" id="close-btn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form>
+                          <div class="form-group">
+                              <input type="text" class="form-control" id="name" placeholder="Enter Item name"
+                                  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                  <small id="name-error-msg" style="color: red;"></small>
+                          </div>
+                          <div class="form-group mt-2">
+                              <input type="text" class="form-control" id="price" placeholder="Enter Item Price"
+                                  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                  <small id="price-error-msg" style="color: red;"></small>
+                          </div>
+                          <div class="form-group mt-2">
+                              <input type="file" class="form-control" id="inputGroupFile01">
+                              <small id="image-error-msg" style="color: red;"></small>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      
+                      <button type="submit" class="btn submitButton w-100" id="submitdata">Add</button>
+                  </div>
+              </div>
+          </div>
         </div>
-
+        
+        <!-- Edit Module Start -->
+        <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content" id="form">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Update Product</h1>
+                  <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <div id="image-div"></div>
+                    <input type="hidden" class="form-control" id="id-edit" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled>
+                  </div>
+                  <div class="form-group mt-2">
+                    <label for="exampleFormControlSelect1">Name -</label>
+                  <input type="text" class="form-control" id="name-edit" placeholder="Enter Product name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="form-group mt-2">
+                    <label for="exampleFormControlSelect1">Price -</label>          
+                    <input type="text" class="form-control" id="price-edit" placeholder="Enter Product Price" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success w-100" id="update">Update</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </main>
     <footer class="footer">
         <div class="contenedor">
@@ -170,105 +154,7 @@
     </footer>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        function setupSection(sectionId) {
-            const inputImagen = document.getElementById(`inputImagen${sectionId}`);
-            const imagenMostrada = document.getElementById(`imagenMostrada${sectionId}`);
-            const nombreProducto = document.getElementById(`nombreProducto${sectionId}`);
-            const precioProducto = document.getElementById(`precioProducto${sectionId}`);
-
-            imagenMostrada.addEventListener("click", function () {
-                inputImagen.click();
-            });
-
-            inputImagen.addEventListener("change", function () {
-                const file = inputImagen.files[0]; // Obtener archivo seleccionado
-
-                if (file) {
-                    const imageUrl = URL.createObjectURL(file);
-
-                    const img = new Image();
-                    img.src = imageUrl;
-
-                    img.onload = function () {
-                        const canvas = document.createElement("canvas");
-                        const ctx = canvas.getContext("2d");
-
-                        // Redimensionar la imagen a 730x1100
-                        canvas.width = 730;
-                        canvas.height = 1100;
-                        ctx.drawImage(img, 0, 0, 730, 1100);
-
-                        imagenMostrada.src = canvas.toDataURL("image/jpeg");
-
-                        URL.revokeObjectURL(imageUrl);
-                    };
-                } else {
-                    // mostrar imagen de defecto si no se selecciona un archivo
-                    imagenMostrada.src = "img/default.jpeg";
-                }
-            });
-
-            imagenMostrada.addEventListener("click", function () {
-                const nuevoNombre = prompt("Ingrese el nuevo nombre del producto:");
-                if (nuevoNombre !== null) {
-                    nombreProducto.textContent = nuevoNombre;
-                }
-
-                const nuevoPrecio = prompt("Ingrese el nuevo precio del producto:");
-                if (nuevoPrecio !== null) {
-                    precioProducto.textContent = "$" + nuevoPrecio;
-                }
-            });
-        }
-
-        document.addEventListener("click", function (event) {
-            if (event.target.classList.contains("eliminarProducto")) {
-                const seccion = event.target.closest(".producto");
-                if (seccion) {
-                    seccion.remove();
-                }
-            }
-        });
-
-        document.getElementById("agregarProducto").addEventListener("click", function () {
-            // Crear una nueva sección
-            const productos = document.querySelector(".productos");
-            const nuevaSeccion = document.createElement("section");
-            nuevaSeccion.className = "producto";
-            const nuevoId = productos.children.length + 1;
-
-            nuevaSeccion.innerHTML = `
-                <div class="iconos">
-                    <input type="file" id="inputImagen${nuevoId}" accept="image/*" style="display: none;">
-                    <img id="imagenMostrada${nuevoId}" src="img/default.jpeg">
-                    <h4 id="nombreProducto${nuevoId}">Nuevo Producto</h4>
-                    <p id="precioProducto${nuevoId}">$0.00</p>
-                    <button class="eliminarProducto">Eliminar</button>
-                </div>
-            `;
-
-            // Agregar la nueva sección al principio de la lista
-            if (productos.children.length > 0) {
-                productos.insertBefore(nuevaSeccion, productos.children[0]);
-            } else {
-                productos.appendChild(nuevaSeccion);
-            }
-
-            // Configurar la nueva sección
-            setupSection(nuevoId);
-        });
-
-        setupSection(1);
-        setupSection(2);
-        setupSection(3);
-        setupSection(4);
-        setupSection(5);
-        setupSection(6);
-        setupSection(7);
-        setupSection(8);
-        setupSection(9);
-    </script>
+    <script type="module" src="js/scriptmenu.js" defer></script>
 </body>
 
 </html>

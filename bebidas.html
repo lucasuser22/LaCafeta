@@ -6,17 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú</title>
     <meta name="description" content="Página web La Cafeta">
-
-
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap"
-        crossorigin="crossorigin" as="font">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap"
-        rel="stylesheet">
-
-    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gestionmenu.css">
 </head>
 
 <body class="menu-bg">
@@ -37,11 +29,6 @@
             </div>
         </div>
 
-        <div class="header__texto">
-            <h2 class="no-margin">Cafetería y Respostería</h2>
-            <p class="no-margin">Bienvenido al paraíso del café y los postres.</p>
-        </div>
-
     </header>
 
 
@@ -52,85 +39,35 @@
             <div>
 
                 <h3>Deleitate con nuestras deliciosas bebidas</h3>
-                <div class="productos">
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/chocolatada-bebida.jpg" alt="bebida">
-                            <h4>Chocolatada</h4>
-                            <p>$3.00</p>
+              
+                <div class="container card-body-all">
+                    <div class="card-container d-flex flex-wrap" id="crud-table">
+                    </div>
+                </div>              
+                            <button type="submit" class="btn submitButton w-100" id="submitdata"></button>
                         </div>
-                    </section>
+                    </div>
+                </div>
+              </div>
 
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/frozen-cafe.jpg" alt="bebida">
-                            <h4>Frozen de café</h4>
-                            <p>$3.00</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/cafe-helado.jpg" alt="bebida">
-                            <h4>Café helado</h4>
-                            <p>$2.50</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/pumpkin-chocolate.jpg" alt="bebida">
-                            <h4>Pumpkin de chocolate</h4>
-                            <p>$3.50</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/enselada-frutas.jpg" alt="bebida">
-                            <h4>frescos naturales</h4>
-                            <p>$2.50</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/frozen-caramelo.jpg" alt="bebida">
-                            <h4>Frozen de caramelo</h4>
-                            <p>$3.50</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/batido-oreo.jpg" alt="bebida">
-                            <h4>Batido de oreo</h4>
-                            <p>$3.50</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/fresa-crema-batida.jpg" alt="bebida">
-                            <h4>Batido de fresa y crema batida</h4>
-                            <p>$3.00</p>
-                        </div>
-                    </section>
-
-                    <section class="producto">
-                        <div class="iconos">
-                            <img src="img/cafe-malvavisco.jpg" alt="bebida">
-                            <h4>Café con malvaviscos</h4>
-                            <p>$2.50</p>
-                        </div>
-                    </section>
-
-                </div> <!--productos -->
-            </div>
+</main>
+<footer class="footer">
+    <div class="contenedor">
+        <div class="barra">
+            <a class="logo" href="index.html">
+                <h1 class="logo_nombre no-margin centrar-texto">La<span class="logo__bold">Cafeta</span></h1>
+            </a>
+            <nav class="navegacion">
+                <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                <a href="menu.html" class="navegacion__enlace">Menu</a>
+                <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            </nav>
         </div>
+    </div>
+</footer>
 
-    </main>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script type="module" src="js/scriptbebidacliente.js" defer></script>
 
 
 
